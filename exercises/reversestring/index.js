@@ -10,6 +10,8 @@
 // Do NOT use array reverse method helper
 // Do NOT use 3rd party packages
 
-function reverse(str) {};
+function reverse(str) {
+    return str.split('').reduce((acc, cur) => acc.unshift(cur) && acc, []).join('');
+};
 
 module.exports = reverse;

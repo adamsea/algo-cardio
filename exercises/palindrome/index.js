@@ -9,6 +9,8 @@
 // INCLUDE spaces and punctuation in determining if a string
 // is a palindrome.
 
-function palindrome(str) {};
+function palindrome(str) {
+    return str === str.split('').reverse().join('');
+};
 
 module.exports = palindrome;

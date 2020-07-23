@@ -10,11 +10,7 @@ function maxChar(str) {
         .split('')
         .reduce((acc, c) => {
             let counter = acc.find(elem => elem.char === c);
-            if (counter) {
-                counter.count++;
-                return acc;
-            }
-            acc.push({ char: c, count: 1});
+            counter ? counter.count++ : acc.push({ char: c, count: 1});
             return acc;
         }, [])
         .sort((a, b) => a.count < b.count ? 1 : -1)[0].char;

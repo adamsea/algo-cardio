@@ -8,6 +8,8 @@
 //   reverseInt(-17) === -71
 //   reverseInt(-20) === -2
 
-function reverseInt(n) {};
+function reverseInt(n) {
+    return /(-?)(\d+)/.test(n) && +`${ RegExp.$1 }${ RegExp.$2.split('').reverse().join('') }`;
+};
 
 module.exports = reverseInt;

@@ -11,6 +11,17 @@
 // twoSum([3, 2, 4], 6); // [1, 2]
 // twoSum([3, 2, 3], 6); // [0, 2]
 
-function twoSum(nums, target) {};
+function twoSum(nums, target) {
+    let result = [];
+    nums.forEach((num, i) => {
+        for (let j = 0, len = nums.length; j < len; j++) {
+            if (num + nums[j] === target) {
+                result = [j, i];
+                break;
+            }
+        }
+    });
+    return result;
+};
 
 module.exports = twoSum;
